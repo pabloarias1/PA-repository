@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎉 ¡Felicidades! ¡Ganaste una salida! 🎉</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      margin-top: 50px;
+    }
+    h1 {
+      color: #ff4081;
+    }
+    p {
+      font-size: 18px;
+    }
+    button {
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    button:hover {
+      background-color: #e03570;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 ¡Felicidades! 🎉</h1>
+    <p>Has ganado una salida exclusiva conmigo. 😉</p>
+    <p>Elige el día que prefieras:</p>
+    <button onclick="selectDate('Viernes')">Viernes</button>
+    <button onclick="selectDate('Sábado')">Sábado</button>
+    <button onclick="selectDate('Domingo')">Domingo</button>
+    <p id="response" style="margin-top:20px; color:green; font-weight:bold; display:none;">¡Respuesta registrada! Me pondré en contacto contigo. 😊</p>
+  </div>
+
+  <script>
+    function selectDate(day) {
+      document.getElementById("response").style.display = "block";
+      // Envía la respuesta a un webhook o un Google Form si lo configuras
+      console.log("Día elegido: " + day);
+    }
+  </script>
+</body>
+</html>
